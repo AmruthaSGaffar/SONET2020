@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
     <link href="gridstyle.css" type="text/css" rel="stylesheet"/>
-    <style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <style>
         body{
             background-image: url('background/back2.jpg');
             background-repeat: no-repeat;
@@ -17,35 +17,116 @@
             background-size: cover;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
          }
-
+        
     </style>
     <title>Grid</title>
 </head>
 <body class="text-light" style="background-color: floralwhite;">
-    <div class="jumbotron container col-sm-6 align-items-center">
-        <h1  style="text-align: center;">Photo Gallery</h1><hr>
-        <h2 style="text-align: center;">Flowers n Birds..</h2>
-        <div class="row">
-            <div class="col-sm-6"> <a href="flower.html">   <img src="flowers/flower1.jpg" class="img-fluid " width="100% \9"></a><b style="text-align: center;">Flowers</b><br>
-                Flowers don’t worry about how they’re going to bloom. They just open up and turn toward the light and that makes them beautiful.
-            </div>
-            <div class="col-sm-6"> <a href="birds.html"> <img src="birds/birds1.jpg" class="img-fluid"  width="100% \9"></a>
-                <b style="text-align: center;">Birds</b><br>
-                The reason birds can fly and we can't is simply because they have perfect faith, for to have faith is to have wings
-            </div>
-        </div><hr>
-        <h2 style="text-align: center;">Hello Fur Friends!</h2>
-        <div class="row">
-            <div class="col-sm-6"> <a href="dog.html"><img src="dogs/dog1.jpeg" class="img-fluid"  width="100% \9"></a>
-                <b style="text-align: center;">Dogs</b><br>
-                Dogs are not our whole life, but they make our lives whole.
-            </div>
-            <div class="col-sm-6"> <a href="cat.html">  <img src="cats/cat1.jpg" class="img-fluid"  width="100% \9"></a>
-                <b style="text-align: center;">Cats</b><br>
-                Not all angels have wings. Sometimes they have whiskers.
-
+    <div class="container">
+        <div class="align-items-center col-sm-8 offset-sm-2">
+            <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-dark" id="Navbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active"> <a class="nav-link" href="grid.html">Photo Gallery</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="flower.html"> Flowers</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="birds.html">Birds</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="dog.html">Dogs</a></li> 
+                            <li class="nav-item"> <a class="nav-link" href="cat.html">Cats</a></li>           
+                        </ul> 
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Mymodal">Login</button>                 
+                    </div>
+                    
+                </div>
+            </nav>
+            <div class="modal fade" id="Mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content text-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title align-items-center " id="exampleModalLongTitle">Login</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                          <input type="text" id="form3" class="form-control validate" placeholder="Your name">
+                        </div>
+                
+                        <div class="md-form mb-4">
+                          <input type="email" id="form2" class="form-control validate" placeholder="Your Email">
+                        </div>
+                
+                      </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <h1  style="text-align: center;">Photo Gallery</h1><hr>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="flowers/flower1.jpg" class="img-fluid " width="100% \9">
+                <div class="carousel-caption">
+                    <h3>Flowers</h3>
+                    <p>Flowers don’t worry about how they’re going to bloom. They just open up and turn toward the light and that makes them beautiful.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="birds/birds2.jpg" class="img-fluid"  width="100% \9">
+                <div class="carousel-caption">
+                    <h3>Birds</h3>
+                    <p>The reason birds can fly and we can't is simply because they have perfect faith, for to have faith is to have wings</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="dogs/dog1.jpeg" class="img-fluid"  width="100% \9">
+                <div class="carousel-caption">
+                    <h3>Dogs</h3>
+                    <p>Dogs are not our whole life, but they make our lives whole.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="cats/cat1.jpg" class="img-fluid"  width="100% \9">
+                <div class="carousel-caption">
+                    <h3>Cats</h3>
+                    <p> Not all angels have wings. Sometimes they have whiskers.</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+       
+        </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html> 
