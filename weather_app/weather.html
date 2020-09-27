@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        
+    </style>   
+    <script src="weather.js">
+        
+    </script> 
+
+</head>
+    <body id="background">
+    <div class="container"><br><br>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                    <div class="card-body row no-gutters align-items-center">
+                        
+                    <select id="city" class="form-control form-control-lg form-control-borderless" onchange="change()">
+                            <option value="" disabled selected>Choose your city</option>
+                            <option id="Hyderabad">Hyderabad</option>
+                            <option id="Delhi">Delhi</option>
+                            <option id="Mumbai">Mumbai</option>
+                            <option id="Chennai">Chennai</option>
+                            <option id="Kolkata">Kolkata</option>
+                            <option id="London">London</option>
+                            <option id="New York">New York</option>
+                            <option id="Hong Kong">Hong Kong</option>
+                            <option id="Paris">Paris</option>
+                            <option id="Tokyo">Tokyo</option>
+                        </select>
+                    </div>
+                </form><br><br>
+                <div class="page-content page-container" id="page-content">
+                    <div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-8 grid-margin stretch-card">
+                                <!--weather card-->
+                                <div class="card card-weather">
+                                    <div class="card-body" id="bg">
+                                        <div class="weather-date-location">
+                                            <h3 id="loc">City</h3>
+                                            <p class="text-gray"> <span class="weather-date" id="lat">latitudes</span> <span class="weather-location" id="long">longitudes</span> </p>
+                                        </div>
+                                        <div class="weather-data d-flex">
+                                            <div class="mr-auto">
+                                                <h4 class="display-3"><div id="temp">temp</div><span class="symbol">°</span>C</h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="d-flex weakly-weather">
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-0"> Humidity </p> 
+                                                <p class="mb-0" id="humidity"> 30° </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1"> Pressure </p> 
+                                                <p class="mb-0" id="pressure"> 31° </p>
+                                            </div>
+                                            <div class="weakly-weather-item">
+                                                <p class="mb-1"> Wind </p> 
+                                                <p class="mb-0" id="wind"> 28° </p>
+                                            </div>
+                                            <div class="stuff">
+                                                <p class="mb-1"> Description </p> 
+                                                <p class="mb-0" id="description"> 30° </p>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--weather card ends-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end of col-->
+        </div>
+    </div>
+    
+    
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    </body>
+</html>
