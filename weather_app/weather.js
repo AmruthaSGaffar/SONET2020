@@ -1,7 +1,7 @@
 function change(){
     var x =document.getElementById("city");
     var y =x.options[x.selectedIndex].value;
-    var baseurl="http://api.openweathermap.org/data/2.5/weather?q="+y+"&units=metric&appid=b739d23c5b442dc2f494c8a0c78af77f";
+    var baseurl="https://api.openweathermap.org/data/2.5/weather?q="+y+"&units=metric&appid=b739d23c5b442dc2f494c8a0c78af77f";
     console.log(y);
 var request = new XMLHttpRequest();
 request.open('GET',baseurl,true)
