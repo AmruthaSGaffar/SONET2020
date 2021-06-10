@@ -16,6 +16,11 @@
     vertical-align: middle;
     width: 100%;
   }
+
+  img{
+    border-radius: 15px;
+    margin: 10px;
+  }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
@@ -32,3 +37,4 @@
       max-width: 100%;
     }
   }
+  
